@@ -1,0 +1,306 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sowmiya M Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: left-aligned single column, wide hero name, project entries as ruled rows with a real visitor-flow strip, skills as a label/value ledger. */
+:root{
+  --bg:#f2f5f7; --surface:#ffffff; --ink:#10202b; --muted:#53636f; --line:#d4dde3; --accent:#0b6e6e; --accent-ink:#ffffff; --tint:#e0eef0;
+  --font-display:'Space Grotesk',system-ui,sans-serif; --font-body:'Inter',system-ui,sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0d171d;--surface:#142027;--ink:#e6eef2;--muted:#9bacb7;--line:#243640;--accent:#4fd1c5;--accent-ink:#06201e;--tint:#16303a;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0d171d;--surface:#142027;--ink:#e6eef2;--muted:#9bacb7;--line:#243640;--accent:#4fd1c5;--accent-ink:#06201e;--tint:#16303a;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem;flex-wrap:wrap}
+.brand{font-family:var(--font-mono);font-weight:500;text-decoration:none;font-size:.95rem}
+.brand b{color:var(--accent);font-weight:500}
+nav{display:flex;align-items:center;gap:.2rem 1.1rem;flex-wrap:wrap}
+nav a{font-size:.9rem;color:var(--muted);text-decoration:none;padding:.15rem 0}
+nav a:hover{color:var(--ink)}
+.theme{font:inherit;font-size:.85rem;background:none;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:.2rem .6rem;cursor:pointer}
+.theme:hover{border-color:var(--accent)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,7vw,5rem) clamp(2rem,5vw,3.5rem);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:2.5rem 3rem;align-items:end}
+.kicker{font-family:var(--font-mono);font-size:.85rem;color:var(--accent);margin-bottom:1rem}
+.hero h1{font-size:clamp(3rem,9vw,6rem);font-weight:700;letter-spacing:-.03em}
+.role{font-family:var(--font-display);font-size:clamp(1.15rem,2.6vw,1.6rem);color:var(--muted);margin-top:.9rem;font-weight:500}
+.lead{max-width:60ch;margin-top:1.4rem;color:var(--muted);font-size:1.05rem}
+.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+.btn{font:inherit;font-weight:600;font-size:.95rem;display:inline-block;text-decoration:none;cursor:pointer;padding:.65rem 1.2rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem 1.3rem;display:grid;gap:.9rem}
+.facts div{display:grid;gap:.1rem}
+.facts dt{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-weight:500}
+.facts{margin:0}
+
+/* sections */
+section{padding-block:clamp(2.2rem,5vw,3.6rem);border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.8rem;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-.02em}
+.sec-head span{font-family:var(--font-mono);font-size:.8rem;color:var(--muted)}
+.about{max-width:68ch;font-size:1.08rem}
+.traits{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.tag{font-family:var(--font-mono);font-size:.78rem;padding:.2rem .6rem;border-radius:5px;background:var(--tint);color:var(--ink);border:1px solid var(--line)}
+
+/* skills ledger */
+.ledger{border-top:1px solid var(--line)}
+.ledger .row{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:.5rem 1.5rem;padding-block:1rem;border-bottom:1px solid var(--line)}
+.ledger h3{font-family:var(--font-mono);font-size:.85rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.ledger .items{display:flex;flex-wrap:wrap;gap:.4rem .5rem}
+
+/* projects */
+.proj{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.8rem 2rem;padding-block:1.6rem;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.proj h3{font-size:1.35rem;letter-spacing:-.01em}
+.proj .stack{font-family:var(--font-mono);font-size:.78rem;color:var(--accent);margin-top:.5rem}
+.proj li{position:relative;padding-left:1.1rem;color:var(--muted);margin-bottom:.45rem}
+.proj li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.flow{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;font-family:var(--font-mono);font-size:.75rem}
+.flow span{padding:.25rem .55rem;border:1px solid var(--line);border-radius:5px;background:var(--surface)}
+.flow span+span::before{content:"\2192\00a0";color:var(--accent)}
+.flow-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:1.1rem}
+.repo{margin-top:1.4rem}
+.repo a{color:var(--accent);font-weight:600}
+
+/* timeline-ish lists */
+.entries .e{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:.3rem 1.5rem;padding-block:1rem;border-bottom:1px solid var(--line)}
+.entries .e:first-child{border-top:1px solid var(--line)}
+.when{font-family:var(--font-mono);font-size:.82rem;color:var(--muted)}
+.e h3{font-size:1.1rem}
+.e p,.e li{color:var(--muted)}
+.e li{margin-top:.35rem}
+.sub{font-family:var(--font-display);font-size:1.3rem;margin:2.6rem 0 1rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:.7rem}
+.certs li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.7rem .9rem;font-size:.95rem}
+.certs small{display:block;color:var(--muted);font-size:.8rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.9rem}
+.c{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;display:grid;gap:.4rem;min-width:0}
+.c .lab{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.c .val{font-weight:500;overflow-wrap:anywhere}
+.c .copy{justify-self:start;font:inherit;font-size:.82rem;font-weight:600;padding:.25rem .7rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.c .copy:hover{border-color:var(--accent)}
+footer{border-top:1px solid var(--line);padding-block:1.6rem;color:var(--muted);font-size:.88rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .proj,.ledger .row,.entries .e{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">sowmiya<b>.</b>m</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button class="theme" id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <p class="kicker">Computer Science student · Tamil Nadu, India</p>
+      <h1>Sowmiya M</h1>
+      <p class="role">Full stack and .NET developer building practical, AI-assisted software</p>
+      <p class="lead">I build web applications with Node.js, React, Flask and the .NET framework, backed by MySQL, MongoDB and SQLite. I like software that is easy to use, reliable under real workflows and simple to deploy.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="https://github.com/SOWMIYA1827" target="_blank" rel="noopener">GitHub profile</a>
+        <a class="btn" href="#contact">Contact details</a>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>Studying</dt><dd>B.E. Computer Science and Engineering</dd></div>
+      <div><dt>College</dt><dd>Karpagam Institute of Technology, Coimbatore</dd></div>
+      <div><dt>CGPA</dt><dd>8.49 / 10 · graduating 2028</dd></div>
+      <div><dt>Experience</dt><dd>.NET Developer Intern</dd></div>
+    </dl>
+  </div>
+
+  <section id="about">
+    <div class="sec-head"><h2>About</h2><span>who I am</span></div>
+    <p class="about">I am a computer science student with a solid background in .NET development, full stack web development, databases and AI-based applications. I enjoy turning ideas into easy-to-use applications, solving problems step by step and learning new technologies. My goal is to build robust, efficient and practical software while steadily improving my technical and professional skills.</p>
+    <div class="traits">
+      <span class="tag">Problem-solving</span><span class="tag">Analytical thinking</span><span class="tag">Teamwork</span><span class="tag">Communication</span><span class="tag">Adaptability</span><span class="tag">Continuous learning</span>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2><span>technical expertise</span></div>
+    <div class="ledger">
+      <div class="row"><h3>Languages</h3><div class="items"><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">Python (Pandas, NumPy)</span><span class="tag">C# (basics)</span></div></div>
+      <div class="row"><h3>Frontend</h3><div class="items"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Flutter</span></div></div>
+      <div class="row"><h3>Backend</h3><div class="items"><span class="tag">Node.js</span><span class="tag">.NET Framework</span><span class="tag">ASP.NET fundamentals</span></div></div>
+      <div class="row"><h3>Databases</h3><div class="items"><span class="tag">MySQL</span><span class="tag">MongoDB</span></div></div>
+      <div class="row"><h3>Tools and DevOps</h3><div class="items"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span></div></div>
+      <div class="row"><h3>Core CS</h3><div class="items"><span class="tag">Data structures and algorithms</span><span class="tag">OOP</span><span class="tag">Networking fundamentals</span><span class="tag">Integration testing</span><span class="tag">Application deployment</span></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><h2>Projects</h2><span>4 selected builds</span></div>
+
+    <article class="proj">
+      <div>
+        <h3>Smart Visitor Management System</h3>
+        <p class="stack">HTML · CSS · Node.js · Google Gemini AI</p>
+      </div>
+      <div>
+        <ul>
+          <li>Pre-registration, OTP verification, QR-based check-in and check-out, ID verification and automatic guide allocation.</li>
+          <li>Real-time visitor tracking and admin analytics, with Google Gemini AI insights for security analysis, traffic prediction and overstay detection.</li>
+        </ul>
+        <p class="flow-label">Visitor journey</p>
+        <div class="flow" aria-label="Visitor journey steps">
+          <span>Pre-register</span><span>OTP verify</span><span>ID check</span><span>QR check-in</span><span>Guide assigned</span><span>QR check-out</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>Library Management System</h3>
+        <p class="stack">HTML · CSS · Node.js</p>
+      </div>
+      <ul>
+        <li>Web-based system for book cataloging, issue and return tracking, and member management, with responsive front-end pages and a Node.js backend.</li>
+        <li>Add, search, issue and return workflows that update book status in the database.</li>
+      </ul>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>Event Feedback Management System</h3>
+        <p class="stack">HTML · CSS · JavaScript · Python · Flask · SQLite</p>
+      </div>
+      <ul>
+        <li>Responsive platform where students submit event feedback, participant details, skills and suggestions.</li>
+        <li>Form validation, database storage and an admin interface to manage and review submitted feedback records.</li>
+      </ul>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>My AI Assistant</h3>
+        <p class="stack">Python · Tkinter · PyAutoGUI · PyInstaller</p>
+      </div>
+      <ul>
+        <li>Windows assistant with a GUI that runs commands, launches and closes applications, opens websites and manages browser tabs.</li>
+        <li>Automation, calculations, date and time functions and Google search, packaged as a standalone Windows .exe application.</li>
+      </ul>
+    </article>
+
+    <p class="repo"><a href="https://github.com/SOWMIYA1827?tab=repositories" target="_blank" rel="noopener">Browse repositories on GitHub</a></p>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2><span>internship, hackathons, research</span></div>
+    <div class="entries">
+      <div class="e">
+        <div class="when">Internship</div>
+        <div>
+          <h3>.NET Developer Intern</h3>
+          <ul>
+            <li>Assisted in developing and maintaining web application modules using C# and the .NET framework.</li>
+            <li>Worked with the team on debugging, unit testing and improving features, gaining hands-on experience with OOP, ASP.NET fundamentals and SQL Server integration.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="e">
+        <div class="when">Hackathon</div>
+        <div><h3>Zero Organi Hackathon</h3><p>Participated and strengthened problem-solving and teamwork skills.</p></div>
+      </div>
+      <div class="e">
+        <div class="when">Research</div>
+        <div><h3>IEEE conference submissions</h3><p>Submitted research papers to IEEE conferences, gaining experience in technical writing and research.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sec-head"><h2>Education</h2><span>and certifications</span></div>
+    <div class="entries">
+      <div class="e"><div class="when">2024 – 2028 (expected)</div><div><h3>B.E. Computer Science and Engineering</h3><p>Karpagam Institute of Technology, Coimbatore · CGPA 8.49/10</p></div></div>
+      <div class="e"><div class="when">2024</div><div><h3>Higher Secondary Certificate (HSC)</h3><p>Govt. Hr. Sec. School · 89%</p></div></div>
+      <div class="e"><div class="when">2022</div><div><h3>Secondary School Leaving Certificate (SSLC)</h3><p>Govt. Hr. Sec. School · 80%</p></div></div>
+    </div>
+    <h3 class="sub">Certifications and courses</h3>
+    <ul class="certs">
+      <li>Data Structures and Algorithms<small>Scaler</small></li>
+      <li>SQL Basics<small>Scaler</small></li>
+      <li>Ethical Hacking<small>NPTEL</small></li>
+      <li>Cloud Computing<small>Skill India</small></li>
+      <li>Cloud Practitioner<small>AWS</small></li>
+      <li>MongoDB Basics<small>Course</small></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head"><h2>Contact</h2><span>open to internships and opportunities</span></div>
+    <div class="contact">
+      <div class="c"><span class="lab">Email</span><span class="val" id="mail">sowmiyamurugan517@gmail.com</span><button class="copy" type="button" data-target="mail">Copy email</button></div>
+      <div class="c"><span class="lab">Phone</span><span class="val" id="phone">+91 93445 35046</span><button class="copy" type="button" data-target="phone">Copy number</button></div>
+      <div class="c"><span class="lab">GitHub</span><a class="val" href="https://github.com/SOWMIYA1827" target="_blank" rel="noopener">github.com/SOWMIYA1827</a></div>
+      <div class="c"><span class="lab">Location</span><span class="val">Tenkasi, Tamil Nadu, India</span></div>
+    </div>
+  </section>
+
+  <footer>© <span id="yr">2026</span> Sowmiya M</footer>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
+  document.getElementById('themeBtn').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=document.getElementById(btn.getAttribute('data-target'));
+      var label=btn.textContent;
+      function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent=label;},1600);}
+      function fallback(){
+        var r=document.createRange();r.selectNodeContents(el);
+        var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+        btn.textContent='Selected, press copy';setTimeout(function(){btn.textContent=label;},2200);
+      }
+      try{navigator.clipboard.writeText(el.textContent.trim()).then(done,fallback);}catch(e){fallback();}
+    });
+  });
+})();
+</script>
+
+</body></html>
